@@ -1,0 +1,90 @@
+{
+  "id": "easemob",
+  "name": "环信 IM (Easemob)",
+  "version": "1.0.0",
+  "description": "环信 IM 接入：发送后回调收消息，REST API 发消息，配合 OpenClaw Webhook",
+  "author": "You",
+  "license": "MIT",
+  "channels": [
+    "easemob"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "channels": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "easemob": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "accounts": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean"
+                    },
+                    "host": {
+                      "type": "string"
+                    },
+                    "org_name": {
+                      "type": "string"
+                    },
+                    "app_name": {
+                      "type": "string"
+                    },
+                    "client_id": {
+                      "type": "string"
+                    },
+                    "client_secret": {
+                      "type": "string"
+                    },
+                    "access_token": {
+                      "type": "string"
+                    },
+                    "callback_secret": {
+                      "type": "string"
+                    },
+                    "callback_verify": {
+                      "type": "boolean"
+                    },
+                    "callback_port": {
+                      "type": "number"
+                    },
+                    "from_user": {
+                      "type": "string"
+                    },
+                    "hooks_token": {
+                      "type": "string"
+                    },
+                    "ignore_self_messages": {
+                      "type": "boolean"
+                    },
+                    "group_session_scope": {
+                      "type": "string",
+                      "enum": [
+                        "group",
+                        "group-user"
+                      ]
+                    },
+                    "context_bridge_enabled": {
+                      "type": "boolean"
+                    },
+                    "context_max_turns": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "easemob",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "openclaw": {
+    "extensions": ["./src/index.ts"],
+    "channel": {
+      "id": "easemob",
+      "label": "环信 IM (Easemob)",
+      "selectionLabel": "环信 IM (Easemob)",
+      "docsPath": "/channels/easemob",
+      "blurb": "环信 IM：回调收消息 + REST 发消息，对接 OpenClaw Webhook",
+      "aliases": ["huanxin", "环信"]
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
